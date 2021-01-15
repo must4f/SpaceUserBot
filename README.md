@@ -1,5 +1,5 @@
 
-[No more support.](https://t.me/fusufs/826)
+[SUPPORT](https://t.me/SpaceAID)
 
 ----
 
@@ -31,7 +31,7 @@
 ### Basit Yöntem
 Eğer botu kurma hakkında fikriniz yoksa burayı okuyunuz: [Kurulum Rehberi](https://github.com/Quiec/AsenaUserBot/wiki/Kurulum/)
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Quiec/AsenaUserBot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/WhoMiri/SpaceAI)
 ### Zor Yöntem
 ```python
 git clone https://github.com/Quiec/AsenaUserBot.git
@@ -62,7 +62,7 @@ Help.add() # Ve Ekleyelim.
 ```
 
 ## Bilgilendirme
-Herhangi bir istek & şikâyet & öneri varsa [destek grubuna](https://t.me/AsenaSupport) ulaşabilirsiniz.
+Herhangi bir istek & şikâyet & öneri varsa [destek grubuna](https://t.me/SpaceAID) ulaşabilirsiniz.
 
 ```
     Userbottan dolayı; Telegram hesabınız yasaklanabilir.
@@ -73,8 +73,5 @@ Herhangi bir istek & şikâyet & öneri varsa [destek grubuna](https://t.me/Asen
 ## Credit
 Thanks for;
 
-[Seden UserBot](https://github.com/TeamDerUntergang/Telegram-UserBot)
+[Asena UserBot](https://github.com/yusufusta/AsenaUserBot)
 
-[Userge](https://github.com/UsergeTeam/Userge)
-
-[Spechide](https://github.com/Spechide)
