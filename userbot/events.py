@@ -79,8 +79,8 @@ def register(**args):
                 if not disable_errors:
                     date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 
-                    text = "**USERBOT HATA RAPORU**\n"
-                    link = "[Asena Destek Grubu](https://t.me/AsenaSupport)"
+                    text = "**USERBOT XETA RAPORU**\n"
+                    link = "[Space Destek Grubu](https://t.me/SupSPACE)"
                     text += "İsterseniz, bunu rapor edebilirsiniz"
                     text += f"- sadece bu mesajı buraya iletin {link}.\n"
                     text += "Hata ve Tarih dışında hiçbir şey kaydedilmez\n"
