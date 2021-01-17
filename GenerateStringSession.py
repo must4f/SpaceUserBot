@@ -37,7 +37,7 @@ class InteractiveTelegramClient(TelegramClient):
             proxy=proxy
         )
         self.found_media = {}
-        print('@AsenaUserBot String Alıcıya Hoş Geldiniz')
+        print('@SpaceUserBot String Alıcıya Hoş Geldiniz')
         print('[i] Telegramın Sunucularına Bağlanılıyor...')
         try:
             loop.run_until_complete(self.connect())
@@ -47,17 +47,17 @@ class InteractiveTelegramClient(TelegramClient):
 
         if not loop.run_until_complete(self.is_user_authorized()):
             if telefon == None:
-               user_phone = input('[?] Telefon Numaranız (Örnek: +90xxxxxxxxxx): ')
+               user_phone = input('[?] Telefon Numaranız (Örnek: +994xxxxxxxxx): ')
             else:
                user_phone = telefon
             try:
                 loop.run_until_complete(self.sign_in(user_phone))
                 self_user = None
             except PhoneNumberInvalidError:
-                print("[!] Geçersiz Bir Numara Girdiniz Örnekte Gibi Giriniz. Örnek: +90xxxxxxxxxx")
+                print("[!] Geçersiz Bir Numara Girdiniz Örnekte Gibi Giriniz. Örnek: +994xxxxxxxxx")
                 exit(1)
             except ValueError:
-               print("[!] Geçersiz Bir Numara Girdiniz Örnekte Gibi Giriniz. Örnek: +90xxxxxxxxxx")
+               print("[!] Geçersiz Bir Numara Girdiniz Örnekte Gibi Giriniz. Örnek: +994xxxxxxxxx")
                exit(1)
 
             while self_user is None:
@@ -78,7 +78,7 @@ class InteractiveTelegramClient(TelegramClient):
 
 
 if __name__ == '__main__':
-   print("[i] Asena String V3\n@AsenaUserBot\n\n")
+   print("[i] Space String V3\n@SpaceUserBot\n\n")
    print("[1] OtoMatik API ID/HASH Alıcı")
    print("[2] String Alıcı\n")
    
@@ -120,8 +120,8 @@ if __name__ == '__main__':
          hashh = soup.find("input", {"name": "hash"}).get("value")
          AppInfo = {
             "hash": hashh,
-            "app_title":"Asena UserBot",
-            "app_shortname": "asenaus" + str(random.randint(9, 99)) + str(time.time()).replace(".", ""),
+            "app_title":"Space UserBot",
+            "app_shortname": "spaceai" + str(random.randint(9, 99)) + str(time.time()).replace(".", ""),
             "app_url": "",
             "app_platform": "android",
             "app_desc": ""
