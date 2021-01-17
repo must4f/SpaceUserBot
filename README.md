@@ -31,11 +31,11 @@
 ### Basit Yöntem
 Eğer botu kurma hakkında fikriniz yoksa burayı okuyunuz: [Kurulum Rehberi](https://github.com/Quiec/AsenaUserBot/wiki/Kurulum/)
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/WhoMiri/SpaceAI)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/WhoMiri/SpaceUserBot)
 ### Zor Yöntem
 ```python
-git clone https://github.com/Quiec/AsenaUserBot.git
-cd AsenaUserBot
+git clone https://github.com/WhoMiri/SpaceUserBot.git
+cd SpaceUserBot
 pip install -r requirements.txt
 # Config.env oluşturun ve düzenleyin. #
 python3 main.py
