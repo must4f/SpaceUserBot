@@ -1,7 +1,7 @@
 {
-  "name": "Asena UserBot",
-  "description": "Asena UserBot",
-  "logo": "https://i.hizliresim.com/1UoYoT.jpg",
+  "name": "Space UserBot",
+  "description": "Space UserBot",
+  "logo": "https://telegra.ph/Space-01-17",
   "keywords": [
     "telegram",
     "userbot",
@@ -10,9 +10,9 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/quiec/AsenaUserbot",
+  "repository": "https://github.com/whomiri/SpaceAI",
   "website":   "https://quiec.tech",
-  "success_url": "https://t.me/AsenaSupport",
+  "success_url": "https://t.me/SupSpace",
   "stack": "container",
   "env": {
     "API_KEY": {
@@ -24,7 +24,7 @@
       "required": true
     },
     "PLUGIN_CHANNEL_ID": {
-      "description": "İsteğe bağlıdır, almak için @AsenaKaliciPlugin",
+      "description": "İsteğe bağlıdır",
       "required": false
     },
     "SPOTIFY_DC": {
@@ -54,7 +54,7 @@
     },
     "UPSTREAM_REPO_URL": {
       "description": "Fork sağlamanız durumunda repo URL'nizi buraya ekleyin. Varsayılan olarak kendi repo adresimiz eklidir.",
-      "value": "https://github.com/Quiec/AsenaUserBot",
+      "value": "https://github.com/whomiri/SpaceAI",
       "required": true
     },
     "COUNTRY": {
@@ -91,7 +91,7 @@
       "value": "False"
     },
     "BOT_USERNAME": {
-      "description": "Inline bot özelliğinin çalışması için gereklidir. Buraya botunuzun kullanıcı adınız yazmanız lazım (Örnek: @QuiecBot). Botunuz yok ise @BotFather yardımı ile bot oluşturabilirsiniz.",
+      "description": "Inline bot özelliğinin çalışması için gereklidir. Buraya botunuzun kullanıcı adınız yazmanız lazım (Örnek: @TheMiriBot). Botunuz yok ise @BotFather yardımı ile bot oluşturabilirsiniz.",
       "required": false  
     },
     "BOT_TOKEN": {
@@ -177,7 +177,7 @@
     },
     "DEFAULT_BIO": {
       "description": "Varsayılan profil biyografisi.",
-      "value": "@AsenaUserBot",
+      "value": "@SpaceUserBot",
       "required": false
     },
     "G_DRIVE_CLIENT_SECRET": {
@@ -217,7 +217,7 @@
     },
     "PAKET_ISMI": {
       "description": "Dızla komutu paket ismini belirleyin. Paket ismi şöyle olacaktır: @KullanıcıAdın verdiğin değer 1",
-      "value": "@AsenaUserBot Paketi",
+      "value": "@SpaceUserBot Paketi",
       "required": false
     },
     "OTOMATIK_KATILMA": {
@@ -227,7 +227,7 @@
     },
     "LANGUAGE": {
       "description": "Botun dili. EN/TR/AZ yazabilirsiniz.",
-      "value": "TR",
+      "value": "AZ",
       "required": true
     }
   },
