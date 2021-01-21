@@ -46,17 +46,17 @@ python3 main.py
 from userbot.events import register
 from userbot.cmdhelp import CmdHelp # <-- Bunu ekleyin.
 
-@register(outgoing=True, pattern="^.deneme")
+@register(outgoing=True, pattern="^.yoxlama")
 async def deneme(event):
-    await event.edit('Gerçekten deneme!')
+    await event.edit('Yoxlamadan sonraki edit!')
 
-Help = CmdHelp('deneme') # Bilgi ekleyeceğiz diyoruz.
+Help = CmdHelp('yoxlama') # Bilgi ekleyeceğiz diyoruz.
 Help.add_command('deneme', # Komut
     None, # Komut parametresi varsa yazın yoksa None yazın
     'Gerçekten deneme yapıyor!', # Komut açıklaması
     'deneme' # Örnek kullanım.
     )
-Help.add_info('@Fusuf tarafından yapılmıştır.') # Bilgi ekleyebilirsiniz.
+Help.add_info('@TheMiri tarafından yapılmıştır.') # Bilgi ekleyebilirsiniz.
 # Ya da uyarı --> Help.add_warning('KULLANMA!')
 Help.add() # Ve Ekleyelim.
 ```
