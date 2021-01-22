@@ -21,9 +21,9 @@ LANG = get_value("__asena")
 
 # ████████████████████████████████ #
 
-@register(outgoing=True, pattern="^.asena(?: |$)(.*)")
+@register(outgoing=True, pattern="^.space(?: |$)(.*)")
 async def asena(event):
-    """ .asena komutu için """
+    """ .space komutu için """
     args = event.pattern_match.group(1).lower()
     if args:
         if args in CMD_HELP:
