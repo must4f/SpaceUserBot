@@ -160,7 +160,7 @@ try:
 
     # PLUGIN MESAJLARI AYARLIYORUZ
     PLUGIN_MESAJLAR = {}
-    ORJ_PLUGIN_MESAJLAR = {"alive": "`Tanrı Türk'ü Korusun. 🐺 Space çalışıyor.`", "afk": f"`{str(choice(AFKSTR))}`", "kickme": "`Güle Güle ben gidiyorum `🤠", "pm": UNAPPROVED_MSG, "dızcı": str(choice(DIZCILIK_STR)), "ban": "{mention}`, yasaklandı!`", "mute": "{mention}`, sessize alındı!`", "approve": "{mention}`, bana mesaj gönderebilirsin!`", "disapprove": "{mention}`, artık bana mesaj gönderemezsin!`", "block": "{mention}`, engellendin!`"}
+    ORJ_PLUGIN_MESAJLAR = {"alive": "`🧑‍🚀 Space işləyir, köməyə ehtiyacınız olsa support grupuna yazın`", "afk": f"`{str(choice(AFKSTR))}`", "kickme": "`Bye Bye mən gedirəm `🚪", "pm": UNAPPROVED_MSG, "dızcı": str(choice(DIZCILIK_STR)), "ban": "{mention}`, Banlandı!!`", "mute": "{mention}`, sessize alındı!`", "approve": "{mention}`, hey sən artığ mənə mesaj göndərə bilərsən!`", "disapprove": "{mention}`, artığ mənə mesaj göndərə bilmərsən!`", "block": "{mention}`, səni blockladım!`"}
 
     PLUGIN_MESAJLAR_TURLER = ["alive", "afk", "kickme", "pm", "dızcı", "ban", "mute", "approve", "disapprove", "block"]
     for mesaj in PLUGIN_MESAJLAR_TURLER:
@@ -176,7 +176,7 @@ try:
             else:
                 PLUGIN_MESAJLAR[mesaj] = dmsj
     if not PLUGIN_CHANNEL_ID == None:
-        LOGS.info("Pluginler Yükleniyor")
+        LOGS.info("Pluginler Yüklenir")
         try:
             KanalId = bot.get_entity(PLUGIN_CHANNEL_ID)
         except:
@@ -190,7 +190,7 @@ try:
                 if not os.path.exists("./userbot/modules/" + plugin.file.name):
                     dosya = bot.download_media(plugin, "./userbot/modules/")
                 else:
-                    LOGS.info("Bu Plugin Zaten Yüklü " + plugin.file.name)
+                    LOGS.info("Bu Plugin Onsuzda Yüklüdür " + plugin.file.name)
                     extractCommands('./userbot/modules/' + plugin.file.name)
                     dosya = plugin.file.name
                     continue 
@@ -201,7 +201,7 @@ try:
 
                     spec.loader.exec_module(mod)
                 except Exception as e:
-                    LOGS.info(f"`Yükleme başarısız! Plugin hatalı.\n\nHata: {e}`")
+                    LOGS.info(f"`Yüklemede problem! Plugin xetalı.\n\nXəta: {e}`")
 
                     try:
                         plugin.delete()
@@ -236,8 +236,8 @@ async def FotoDegistir (foto):
 for module_name in ALL_MODULES:
     imported_module = import_module("userbot.modules." + module_name)
 
-LOGS.info("Botunuz çalışıyor! Herhangi bir sohbete .alive yazarak Test edin."
-          " Yardıma ihtiyacınız varsa, Destek grubumuza gelin t.me/AsenaSupport")
+LOGS.info("Botunuz işləyir! Herhansısa bir söhbete .alive yazarağ Test edin."
+          " Köməyə ehtiyacınız varsa, Destek grubumuza gelin t.me/SpaceAİD")
 LOGS.info(f"Bot sürümünüz: Asena {ASENA_VERSION}")
 
 """
