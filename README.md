@@ -4,14 +4,14 @@
 ----
 
 <div align="center">
-  <img src="https://telegra.ph/Space-01-17" width="200" height="200">
+  <img src="https://telegra.ph/Space-01-17">
   <h1>SPACE UserBot</h1>
 </div>
 <p align="center">
     Space UserBot, Telegram kullanmanızı kolaylaştıran bir bottur. Tamamen açık kaynaklı ve ücretsizdir.
     <br>
-        <a href="https://github.com/quiec/AsenaUserBot/blob/master/README.md#kurulum">Kurulum</a> |
-        <a href="https://github.com/Quiec/AsenaUserBot/wiki/G%C3%BCncelleme">Güncelleme</a> |
+        <a href="https://github.com/whomiri/SpaceUserBot/blob/master/README.md#kurulum">Kurulum</a> |
+        <a href="https://github.com/Whomiri/SpaceUserBot/wiki/G%C3%BCncelleme">Güncelleme</a> |
         <a href="https://t.me/SpaceUserBot">Telegram Kanalı</a>
     <br>
 </p>
@@ -62,7 +62,7 @@ Help.add() # Ve Ekleyelim.
 ```
 
 ## Bilgilendirme
-Herhangi bir istek & şikâyet & öneri varsa [destek grubuna](https://t.me/SpaceAID) ulaşabilirsiniz.
+Herhangi bir istek & şikâyet & öneri varsa [destek grubuna](https://t.me/SupSpace) ulaşabilirsiniz.
 
 ```
     Userbottan dolayı; Telegram hesabınız yasaklanabilir.
