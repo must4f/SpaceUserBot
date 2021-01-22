@@ -10,8 +10,8 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/whomiri/SpaceAI",
-  "website":   "https://quiec.tech",
+  "repository": "https://github.com/whomiri/SpaceUserBot",
+  "website":   "https://t.me/TheMiri",
   "success_url": "https://t.me/SupSpace",
   "stack": "container",
   "env": {
@@ -54,7 +54,7 @@
     },
     "UPSTREAM_REPO_URL": {
       "description": "Fork sağlamanız durumunda repo URL'nizi buraya ekleyin. Varsayılan olarak kendi repo adresimiz eklidir.",
-      "value": "https://github.com/whomiri/SpaceAI",
+      "value": "https://github.com/whomiri/SpaceUserBot",
       "required": true
     },
     "COUNTRY": {
