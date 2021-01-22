@@ -12,7 +12,7 @@
   ],
   "repository": "https://github.com/whomiri/SpaceUserBot",
   "website":   "https://t.me/TheMiri",
-  "success_url": "https://t.me/SupSpace",
+  "success_url": "https://t.me/SpaceAiD",
   "stack": "container",
   "env": {
     "API_KEY": {
