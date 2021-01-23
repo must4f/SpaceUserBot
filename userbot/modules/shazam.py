@@ -59,7 +59,7 @@ async def shazam(event):
         if not 'track' in sarki:
             return await event.edit('`Ehh Shazam verdiyiniz səsi anlamadı 😔. Biraz daha açıq səs göndərə bilərsən?`')
         await event.edit('`✅ Musiqini tapdım... Məlumatlar toplanır...`')
-        Caption = f'**Şarkı:** [{sarki["track"]["title"]}]({sarki["track"]["url"]})\n'
+        Caption = f'**Musiqi:** [{sarki["track"]["title"]}]({sarki["track"]["url"]})\n'
         if 'artists' in sarki['track']:
             Caption += f'**Sənətçi(lər):** [{sarki["track"]["subtitle"]}](https://www.shazam.com/artist/{sarki["track"]["artists"][0]["id"]})\n'
         else:
@@ -70,7 +70,7 @@ async def shazam(event):
 
         if sarki["track"]["sections"][0]["type"] == "SONG":
             for metadata in sarki["track"]["sections"][0]["metadata"]:
-                Caption += f'**{"Yıl" if metadata["title"] == "Sorti" else metadata["title"]}:** `{metadata["text"]}`\n'
+                Caption += f'**{"İl" if metadata["title"] == "Sorti" else metadata["title"]}:** `{metadata["text"]}`\n'
 
         Caption += '\n**Musiqi Platformaları:** '
         for provider in sarki['track']['hub']['providers']:
