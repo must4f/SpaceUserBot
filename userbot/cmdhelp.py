@@ -59,7 +59,7 @@ class CmdHelp:
         Sonuç getirir.
         """
 
-        result = f"**📗 Dosya:** `{self.FILE}`\n"
+        result = f"**📗 Fayl:** `{self.FILE}`\n"
         if self.WARNING == '' and self.INFO == '':
             result += f"**⬇️ Official:** {'✅' if self.IS_OFFICIAL else '❌'}\n\n"
         else:
