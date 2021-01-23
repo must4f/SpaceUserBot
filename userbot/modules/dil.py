@@ -21,7 +21,7 @@ async def dil(event):
 
     komut = event.pattern_match.group(1)
     if search(r"y[uü]kle|install", komut):
-        await event.edit("`Dil dosyası yükleniyor... Lütfen bekleyiniz.`")
+        await event.edit("`Dil dosyası yüklenir...`")
         if event.is_reply:
             reply = await event.get_reply_message()
             dosya = await reply.download_media()
@@ -64,7 +64,7 @@ async def dil(event):
                 f"**Dil Kodu: **`{dosya['LANGCODE']}`\n"
                 f"**Çevirmen: **`{dosya['AUTHOR']}`\n"
 
-                f"\n\n`Dil dosyasını yüklemek için` `.dil yükle` `komutunu kullanınız.`"
+                f"\n\n`Dil dosyasını yüklemek üçün` `.dil yükle` `yazın`"
             )
         else:
             await event.edit("**Lütfen bir dil dosyasına yanıt verin!**")
@@ -72,9 +72,9 @@ async def dil(event):
         await event.edit(
             f"**Dil: **`{LANGUAGE_JSON['LANGUAGE']}`\n"
             f"**Dil Kodu: **`{LANGUAGE_JSON['LANGCODE']}`\n"
-            f"**Çevirmen: **`{LANGUAGE_JSON ['AUTHOR']}`\n"
+            f"**Çeviren: **`{LANGUAGE_JSON ['AUTHOR']}`\n"
 
-            f"\n\nDiğer diller için @AsenaDil kanalına bakabilirsiniz."
+            f"\n\nDiger diller üçün @SpaceDil kanalına baxın"
         )
 
 CmdHelp('dil').add_command(
