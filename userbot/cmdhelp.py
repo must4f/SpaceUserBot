@@ -76,9 +76,9 @@ class CmdHelp:
         for command in self.COMMANDS:
             command = self.COMMANDS[command]
             if command['params'] == None:
-                result += f"**🛠 Komut:** `{PATTERNS[:1]}{command['command']}`\n"
+                result += f"**🛠 Əmr:** `{PATTERNS[:1]}{command['command']}`\n"
             else:
-                result += f"**🛠 Komut:** `{PATTERNS[:1]}{command['command']} {command['params']}`\n"
+                result += f"**🛠 Əmr:** `{PATTERNS[:1]}{command['command']} {command['params']}`\n"
                 
             if command['example'] == None:
                 result += f"**💬 Açıqlama:** `{command['usage']}`\n\n"
