@@ -70,7 +70,7 @@ async def cevir(event):
             indir = await rep_msg.download_media()
             ses = await asyncio.create_subprocess_shell(f"ffmpeg -i '{indir}' {KOMUT[efekt]} output.mp3")
             await ses.communicate()
-            await event.client.send_file(event.chat_id, "output.mp3", reply_to=rep_msg, caption="@AsenaUserBot `ile efekt uygulandı.`")
+            await event.client.send_file(event.chat_id, "output.mp3", reply_to=rep_msg, caption="@SpaceUserBot `ile efekt uygulandı.`")
             
             await event.delete()
             os.remove(indir)
@@ -120,7 +120,7 @@ async def cevir(event):
         await event.edit('`Ses yükleniyor...`')
         
         try:
-            await event.client.send_file(event.chat_id, "out.mp3",reply_to=rep_msg, caption='@AsenaUserBot ile sese çevrildi.')
+            await event.client.send_file(event.chat_id, "out.mp3",reply_to=rep_msg, caption='@SpaceUserBot ile sese çevrildi.')
         except:
             os.remove(video)
             return await event.edit('`Sese çevirilemedi!`')
