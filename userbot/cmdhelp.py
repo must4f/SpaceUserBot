@@ -67,10 +67,10 @@ class CmdHelp:
             
             if self.INFO == '':
                 if not self.WARNING == '':
-                    result += f"**⚠️ Uyarı:** {self.WARNING}\n\n"
+                    result += f"**⚠️ Xəbərdarlıq:** {self.WARNING}\n\n"
             else:
                 if not self.WARNING == '':
-                    result += f"**⚠️ Uyarı:** {self.WARNING}\n"
+                    result += f"**⚠️ Xəbərdarlıq:** {self.WARNING}\n"
                 result += f"**ℹ️ Info:** {self.INFO}\n\n"
                      
         for command in self.COMMANDS:
@@ -81,10 +81,10 @@ class CmdHelp:
                 result += f"**🛠 Komut:** `{PATTERNS[:1]}{command['command']} {command['params']}`\n"
                 
             if command['example'] == None:
-                result += f"**💬 Açıklama:** `{command['usage']}`\n\n"
+                result += f"**💬 Açıqlama:** `{command['usage']}`\n\n"
             else:
-                result += f"**💬 Açıklama:** `{command['usage']}`\n"
-                result += f"**⌨️ Örnek:** `{PATTERNS[:1]}{command['example']}`\n\n"
+                result += f"**💬 Açıqlama:** `{command['usage']}`\n"
+                result += f"**⌨️ Misal:** `{PATTERNS[:1]}{command['example']}`\n\n"
         return result
 
     def add(self):
@@ -97,9 +97,9 @@ class CmdHelp:
     
     def getText(self, text : str):
         if text == 'REPLY_OR_USERNAME':
-            return '<kullanıcı adı> <kullanıcı adı/yanıtlama>'
+            return '<istifadeçi adı> <istifadeçi adı/reply>'
         elif text == 'OR':
             return 'veya'
         elif text == 'USERNAMES':
-            return '<kullanıcı ad(lar)ı>'
+            return '<istifadeçi ad(lar)ı>'
         
