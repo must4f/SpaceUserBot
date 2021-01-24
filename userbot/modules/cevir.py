@@ -45,7 +45,7 @@ async def cevir(event):
 
         im = Image.open(foto).convert("RGB")
         im.save("sticker.png", "png")
-        await event.client.send_file(event.chat_id, "sticker.png", reply_to=rep_msg, caption="@AsenaUserBot `ile fotoğrafa çevirildi.`")
+        await event.client.send_file(event.chat_id, "sticker.png", reply_to=rep_msg, caption="@SpaceUserBot `ilə şəkilə çevirildi 👨‍🚀`")
 
         await event.delete()
         os.remove("sticker.png")
@@ -111,16 +111,16 @@ async def cevir(event):
         if not event.is_reply or not rep_msg.video:
             await event.edit(LANG['NEED_VIDEO'])
             return
-        await event.edit('`Sese çevriliyor...`')
+        await event.edit('`Səsə çevrilir...`')
         video = io.BytesIO()
         video = await event.client.download_media(rep_msg.video)
         gif = await asyncio.create_subprocess_shell(
             f"ffmpeg -y -i '{video}' -vn -b:a 128k -c:a libmp3lame out.mp3")
         await gif.communicate()
-        await event.edit('`Ses yükleniyor...`')
+        await event.edit('`Səs yüklənir...`')
         
         try:
-            await event.client.send_file(event.chat_id, "out.mp3",reply_to=rep_msg, caption='@SpaceUserBot ile sese çevrildi.')
+            await event.client.send_file(event.chat_id, "out.mp3",reply_to=rep_msg, caption='@SpaceUserBot ilə səsə çevrildi.')
         except:
             os.remove(video)
             return await event.edit('`Sese çevirilemedi!`')
@@ -133,11 +133,11 @@ async def cevir(event):
         return
 
 CmdHelp('cevir').add_command(
-    'çevir foto', '<yanıt>', 'Stickeri fotoğrafa çevirir.'
+    'çevir foto', '<cavab>', 'Stiikeri şəkilə çevirər.'
 ).add_command(
-    'çevir gif', '<yanıt>', 'Videoyu veya animasyonlu stickeri gife çevirir.'
+    'çevir gif', '<cavab>', 'Videoyu gifə çevirər.'
 ).add_command(
-    'çevir ses', '<çocuk/robot/earrape/hızlı/parazit/yankı>', 'Sese efekt uygular.'
+    'çevir ses', '<çocuk/robot/earrape/hızlı/parazit/yankı>', 'Səsə effekt verər.'
 ).add_command(
-    'çevir mp3', '<yanıt>', 'Yanıt verdiğiniz videoyu mp3 yapar.'
+    'çevir mp3', '<cavab>', 'Cavab verdiyiniz videonu mp3 edər.'
 ).add()
