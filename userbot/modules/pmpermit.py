@@ -323,7 +323,7 @@ async def blockpm(block):
         replied_user = await block.client.get_entity(reply.from_id)
         if replied_user.id in BRAIN_CHECKER or replied_user.id in WHITELIST:
             await block.edit(
-                "`Hayır dostum! Asena yöneticisini engellemeyeceğim!!`"
+                "`Oups, Xəta! Bağışla amma bunu SpaceAI'də səlahiyyətli birinə edə bilmərəm 👨‍🚀!!`"
             )
             return
 
@@ -347,7 +347,7 @@ async def blockpm(block):
     else:
         if block.chat_id in BRAIN_CHECKER:
             await block.edit(
-                "`Hayır dostum! Asena sahibini engellemeyeceğim!!`"
+                "`Oups, Xəta! Bağışla amma bunu SpaceAI Sahibinə edə bilmərəm 👨‍🚀!!`"
             )
             return
 
@@ -401,15 +401,15 @@ async def unblockpm(unblock):
         )
 
 CmdHelp('pmpermit').add_command(
-    'approve', None, 'Yanıt verilen kullanıcıya PM atma izni verilir.', 
+    'approve', None, 'Cavab verilən istifadəçiyə PM yazma icazəsi verilir.', 
 ).add_command(
-    'disapprove', None, 'Yanıt verilen kullanıcının PM onayını kaldırır.'
+    'disapprove', None, 'Cavab verilən istifadəçinin PM icasəsini alar.'
 ).add_command(
-    'block', '<kullanıcı adı/yanıtlama>', 'Kullanıcıyı engeller.'
+    'block', '<istifadəçi adı/cavablama>', 'İstifadəçini blok edər.'
 ).add_command(
-    'unblock', '<kullanıcı adı/yanıtlama>', 'Kullanıcının engellemesini kaldırır.'
+    'unblock', '<istifadəçi adş/cavablama>', 'İstifadəçini blokdar çıxarar.'
 ).add_command(
-    'notifoff', None, 'Onaylanmamış özel mesajların bildirimlerini temizler ya da devre dışı bırakır.'
+    'notifoff', None, 'İcazə verilmiş şəxsi mesajların bildirimlərini təmizləyər ya da deaktiv edər.'
 ).add_command(
-    'notifon', None, 'Onaylanmamış özel mesajların bildirim göndermesine izin verir.'
+    'notifon', None, 'İcazə verilmiş şəxsi mesajların bildirim göndərməsinə icazə verər.'
 ).add()
