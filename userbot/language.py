@@ -45,7 +45,7 @@ for dil in bot.iter_messages(pchannel, filter=InputMessagesFilterDocument):
 if LANGUAGE_JSON == None:
     if path.isfile(f"./userbot/language/{LANGUAGE}.spacejson"):
         try:
-            LANGUAGE_JSON = loads(open(f"./userbot/language/{LANGUAGE}.asenajson", "r").read())
+            LANGUAGE_JSON = loads(open(f"./userbot/language/{LANGUAGE}.spacejson", "r").read())
         except JSONDecodeError:
             raise Exception("Invalid json file")
     else:
