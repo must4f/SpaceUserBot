@@ -26,13 +26,13 @@ async def dil(event):
             reply = await event.get_reply_message()
             dosya = await reply.download_media()
 
-            if ((len(reply.file.name.split(".")) >= 2) and (not reply.file.name.split(".")[1] == "asenajson")):
-                return await event.edit("`Lütfen geçerli bir` **AsenaJSON** `dosyası verin!`")
+            if ((len(reply.file.name.split(".")) >= 2) and (not reply.file.name.split(".")[1] == "spacejson")):
+                return await event.edit("`Lütfen geçerli bir` **SpaceJSON** `dosyası verin!`")
 
             try:
                 dosya = loads(open(dosya, "r").read())
             except JSONDecodeError:
-                return await event.edit("`Lütfen geçerli bir` **AsenaJSON** `dosyası verin!`")
+                return await event.edit("`Lütfen geçerli bir` **SpaceJSON** `dosyası verin!`")
 
             await event.edit(f"`{dosya['LANGUAGE']}` `dili yükleniyor...`")
             pchannel = await event.client.get_entity(PLUGIN_CHANNEL_ID)
@@ -50,14 +50,14 @@ async def dil(event):
         if event.is_reply:
             reply = await event.get_reply_message()
             if ((len(reply.file.name.split(".")) >= 1) and (not reply.file.name.split(".")[1] == "asenajson")):
-                return await event.edit("`Lütfen geçerli bir` **AsenaJSON** `dosyası verin!`")
+                return await event.edit("`Lütfen geçerli bir` **SpaceJSON** `dosyası verin!`")
 
             dosya = await reply.download_media()
 
             try:
                 dosya = loads(open(dosya, "r").read())
             except JSONDecodeError:
-                return await event.edit("`Lütfen geçerli bir` **AsenaJSON** `dosyası verin!`")
+                return await event.edit("`Lütfen geçerli bir` **SpaceJSON** `dosyası verin!`")
 
             await event.edit(
                 f"**Dil: **`{dosya['LANGUAGE']}`\n"
