@@ -64,7 +64,7 @@ def register(**args):
                 return
              
             if groups_only and not check.is_group:
-                await check.respond("`Bunun bir grup olduğunu sanmıyorum.`")
+                await check.respond("`Bunun bir qrup olduğunu düşünmürəm.`")
                 return
 
             try:
@@ -80,10 +80,10 @@ def register(**args):
                     date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 
                     text = "**USERBOT XETA RAPORU**\n"
-                    link = "[Space Destek Grubu](https://t.me/SupSPACE)"
-                    text += "İsterseniz, bunu rapor edebilirsiniz"
-                    text += f"- sadece bu mesajı buraya iletin {link}.\n"
-                    text += "Hata ve Tarih dışında hiçbir şey kaydedilmez\n"
+                    link = "[Space Destek Qrupu](https://t.me/Spaceaid)"
+                    text += "İstəsəniz, bunu bildirə bilərsiniz."
+                    text += f"- sadəcə bu mesajı buraya göndərin {link}.\n"
+                    text += "Xəta və Tarix xaricində heç bir şey qeyd edilməz\n"
 
                     ftext = "========== UYARI =========="
                     ftext += "\nBu dosya sadece burada yüklendi,"
