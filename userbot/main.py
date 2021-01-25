@@ -238,7 +238,7 @@ for module_name in ALL_MODULES:
 
 LOGS.info("Botunuz işləyir! Herhansısa bir söhbete .alive yazarağ Test edin."
           " Köməyə ehtiyacınız varsa, Destek grubumuza gelin t.me/SpaceAİD")
-LOGS.info(f"Bot sürümünüz: Asena {ASENA_VERSION}")
+LOGS.info(f"Bot versiyanız: Space {ASENA_VERSION}")
 
 """
 if len(argv) not in (1, 3, 4):
