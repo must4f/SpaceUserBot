@@ -86,7 +86,7 @@ def MemeYap (Resim, Text, FontS = 40, Bottom = False, BottomText = None):
                 drawTextWithOutline(Bottom_Satirlar[i], x, y)
                 lastY = y
 
-    Foto.save("asenameme.png")
+    Foto.save("spacememe.png")
 
 @register(outgoing=True, pattern="^.sangmata(?: |$)(.*)")
 async def sangmata(event):
@@ -128,7 +128,7 @@ async def sangmata(event):
 
 @register(outgoing=True, pattern="^.meme ?((\d*)(.*))")
 async def memeyap(event):
-    """ Daha iyi bir Meme modülü, @Fusuf tarafından yazıldı """
+    """ Meme modulu """
     font = event.pattern_match.group(2)
     if font == "":
         font = 35
@@ -151,29 +151,29 @@ async def memeyap(event):
         if reply.photo:
             Resim = await reply.download_media()
         elif reply.sticker and reply.file.ext == ".webp":
-            if os.path.exists("./AsenaSticker.png"):
-                os.remove("./AsenaSticker.png")
+            if os.path.exists("./SpaceSticker.png"):
+                os.remove("./SpaceSticker.png")
 
             foto = await reply.download_media()
             im = Image.open(foto).convert("RGB")
-            im.save("AsenaSticker.png", "png")
-            Resim = "AsenaSticker.png"
+            im.save("SpaceSticker.png", "png")
+            Resim = "SpaceSticker.png"
         elif reply.sticker and reply.file.ext == ".tgs":
             sticker = await reply.download_media()
-            os.system(f"lottie_convert.py --frame 0 -if lottie -of png '{sticker}' AsenaSticker.png")
+            os.system(f"lottie_convert.py --frame 0 -if lottie -of png '{sticker}' SpaceSticker.png")
             os.remove(sticker)
-            Resim = "AsenaSticker.png"
+            Resim = "SpaceSticker.png"
         elif reply.media:
             Resim = await reply.download_media()
             Sure = os.system("ffmpeg -i '"+Resim+"' 2>&1 | grep Duration | awk '{print $2}' | tr -d , | awk -F ':' '{print ($3+$2*60+$1*3600)/2}'``")
             os.system(f"ffmpeg -i '{Resim}' -vcodec mjpeg -vframes 1 -an -f rawvideo -ss {Sure} AsenaThumb.jpg")
             os.remove(Resim)
-            Resim = 'AsenaThumb.jpg'
+            Resim = 'SpaceThumb.jpg'
         else:
             return await event.edit(LANG['REPLY_TO_MEME'])
             
-        if os.path.exists("./asenameme.png"):
-            os.remove("./asenameme.png")
+        if os.path.exists("./spacememe.png"):
+            os.remove("./spacememe.png")
 
         MemeYap(Resim, Text, font, Bottom, BottomText)
         await event.client.send_file(event.chat_id, "./asenameme.png", reply_to=reply)
