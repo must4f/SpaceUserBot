@@ -204,7 +204,7 @@ CmdHelp('heroku').add_command(
     ).add_command(
         'get var', None, 'Mövcud VARlarınızı əldə edin, yalnız botlog gurupunuzda istifadə edin.'
     ).add_command(
-        'del var', None, 'del var <Var adı> Seçdiyiniz ConfigVar'ı silər sildikdən sonra botunuza .restart atın.'
+        'del var', None, 'del var <Var adı> Seçdiyiniz ConfigVarı silər sildikdən sonra botunuza .restart atın.'
     ).add_command(
         'log', None, 'Heroku logunuza baxin'
     ).add()
