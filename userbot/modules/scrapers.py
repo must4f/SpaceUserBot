@@ -384,7 +384,7 @@ async def moni(event):
 
 @register(outgoing=True, pattern=r"^.google ?(.*)")
 async def gsearch(q_event):
-    """ .google komutu ile basit Google aramaları gerçekleştirilebilir """
+    """ .google  """
     match = q_event.pattern_match.group(1)
     page = findall(r"page=\d+", match)
     try:
@@ -405,14 +405,14 @@ async def gsearch(q_event):
             msg += f"[{title}]({link})\n`{desc}`\n\n"
         except IndexError:
             break
-    await q_event.edit("**Arama Sorgusu:**\n`" + match + "`\n\n**Sonuçlar:**\n" +
+    await q_event.edit("**Axtarış sorğusu:**\n`" + match + "`\n\n**Nəticələr:**\n" +
                        msg,
                        link_preview=False)
 
     if BOTLOG:
         await q_event.client.send_message(
             BOTLOG_CHATID,
-            match + "`sözcüğü başarıyla Google'da aratıldı!`",
+            match + "`sözcüyü uğurla Google'da axtarıldı!`",
         )
 
 
