@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 #
 
-# Asena UserBot - Yusuf Usta
+# SpaceUserBot - The Miri - Dadashzade
 
 
 
@@ -78,5 +78,5 @@ async def auto(event):
             return
 
 CmdHelp('auto').add_command(
-    'auto', 'isim ya da bio', 'Otomatik saate göre değiştirir', '.auto isim'
+    'auto', 'ad ya da bio', 'Avtomatik saata görə dəyişdirər', '.auto ad'
 ).add()
