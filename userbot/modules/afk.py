@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 #
 
-# Asena UserBot - Yusuf Usta
+# SpaceUserBot - The Miri - Dadashzade
 #
 
 """ AFK ile ilgili komutları içeren UserBot modülü """
@@ -328,6 +328,6 @@ async def type_afk_is_not_true(notafk):
 
 CmdHelp('afk').add_command(
     'afk', 
-    '<İsteğe bağlı sebep>', 
-    'AFK olduğunuzu belirtir. Kim size pm atarsa ya da sizi etiketlerse sizin AFK olduğunuzu ve belirlediğiniz sebebi gösterir. Herhangi bir yere mesaj yazdığınızda AFK modu kapanır.'
+    '<İsteyə bağlı bir səbəb>', 
+    'AFK olduğunuzu gösterir. Kim size pm atarsa ya da sizi etiketlerse sizin AFK olduğunuzu ve belirlediğiniz sebebi gösterir. Herhangi bir yere mesaj yazdığınızda AFK modu kapanır.'
     ).add()
