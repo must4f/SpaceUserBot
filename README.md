@@ -64,8 +64,8 @@ Help.add() # Ve Əlavə Edək.
 
 ```
     Userbottan dolayı; Telegram hesabınız bağlana bilər.
-    Bu bir açık qaynaqlı proyektdir, yaptığınız her istifadədən özünüz cavabdehsiniz Space Yaradıcıları və Adminləri olarağ heç bir cavabdehlik daşımırıö.
-    Asenayı kurarak bu sorumlulukları kabul etmiş sayılırsınız.
+    Bu bir açık qaynaqlı proyektdir, yaptığınız her istifadədən özünüz cavabdehsiniz Space Yaradıcıları və Adminləri olarağ heç bir cavabdehlik daşımırıq.
+    Space qurarag bu Cavebdihlikleri qebul etmiş sayılırsınız.
 ```
 
 ## Credit
