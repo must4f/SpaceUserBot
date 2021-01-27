@@ -8,7 +8,7 @@
   <h1>SPACE UserBot</h1>
 </div>
 <p align="center">
-    Space UserBot, Telegram işlətməyinizi asanlaşdıran bir proyektdirş Bütünlüklə açığ yazılım kodlarına sahibdir. Müəllif hüquqları GNU Licence ilə qorunur.
+    Space UserBot, Telegram işlətməyinizi asanlaşdıran bir proyektdir Bütünlüklə açığ yazılım kodlarına sahibdir. Müəllif hüquqları GNU Licence ilə qorunur.
     <br>
         <a href="https://github.com/whomiri/SpaceUserBot/blob/master/README.md#kurulum">Kurulum</a> |
         <a href="https://github.com/Whomiri/SpaceUserBot/wiki/G%C3%BCncelleme">Güncelleme</a> |
