@@ -63,8 +63,8 @@ if not LANGUAGE in ["EN", "TR", "AZ", "UZ", "DEFAULT"]:
     LOGS.info("Bilinmeyen bir dil yazdınız. Bundan dolayı DEFAULT kullanılıyor.")
     LANGUAGE = "DEFAULT"
     
-# Asena Sürümü
-ASENA_VERSION = "v3.0.7"
+# Space versiasi
+SPACE_VERSION = "v3.0.7"
 
 # Telegram API KEY ve HASH
 API_KEY = os.environ.get("API_KEY", None)
