@@ -29,16 +29,16 @@ import re
 import userbot.cmdhelp
 
 DIZCILIK_STR = [
-    "Çıkartmayı dızlıyorum...",
-    "Yaşasın dızcılık...",
-    "Bu çıkartmayı kendi paketime davet ediyorum...",
-    "Bunu dızlamam lazım...",
-    "Hey bu güzel bir çıkartma!\nHemen dızlıyorum..",
-    "Çıkartmanı dızlıyorum\nhahaha.",
-    "Hey şuraya bak. (☉｡☉)!→\nBen bunu dızlarken...",
-    "Güller kırmızı menekşeler mavi, bu çıkartmayı paketime dızlayarak havalı olacağım...",
-    "Çıkartma hapsediliyor...",
-    "Bay dızcı bu çıkartmayı dızlıyor... ",
+    "Stikeri oğurlayıram...",
+    "Bu stikeri çox bəyəndimmm...",
+    "Bu stikeri öz paketimə əlavə edirəm...",
+    "Bunu oğurlamalıyamm...",
+    "Hey bu əla stikerdir!\nElə indi oğurlayıram..",
+    "Stikerini oğurladım\nhahaha.",
+    "Hey bura bax. (☉｡☉)!→\nMən bunu oğurlayarkən...",
+    "Bu stikeri paketimə əlavə edirəm...",
+    "Stiker paketə əlavə edilir...",
+    "Stikeri öz paketimə əlavə edirəm... ",
 ]
 
 AFKSTR = [
