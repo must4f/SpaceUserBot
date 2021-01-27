@@ -66,10 +66,10 @@ AFKSTR = [
     "Şu an burada değilim....\nama öyleysem ...\n\nbu harika olmaz mıydı?",
 ]
 
-UNAPPROVED_MSG = ("`Hey,` {mention}`! Bu bir bot. Endişelenme.\n\n`"
-                  "`Sahibim sana PM atma izni vermedi. `"
-                  "`Lütfen sahibimin aktif olmasını bekleyin, o genellikle PM'leri onaylar.\n\n`"
-                  "`Bildiğim kadarıyla o kafayı yemiş insanlara PM izni vermiyor.`")
+UNAPPROVED_MSG = ("`Hey,` {mention}`! Bu bir botdur. Narahat olma.\n\n`"
+                  "`Sahibim sənə PM yazma icazəsi verməyib. `"
+                  "`Zəhmət olmasa sahibimin aktiv olmasını gözləyin, o hər zaman PM yazmağa icazə verər.\n\n`"
+                  "`Bildiyim qədəri ilə o insanlara PM icasi vermir.`")
 
 DB = connect("learning-data-root.check")
 CURSOR = DB.cursor()
@@ -160,7 +160,7 @@ try:
 
     # PLUGIN MESAJLARI AYARLIYORUZ
     PLUGIN_MESAJLAR = {}
-    ORJ_PLUGIN_MESAJLAR = {"alive": "`🧑‍🚀 Space işləyir, köməyə ehtiyacınız olsa support grupuna yazın`", "afk": f"`{str(choice(AFKSTR))}`", "kickme": "`Bye Bye mən gedirəm `🚪", "pm": UNAPPROVED_MSG, "dızcı": str(choice(DIZCILIK_STR)), "ban": "{mention}`, Banlandı!!`", "mute": "{mention}`, sessize alındı!`", "approve": "{mention}`, hey sən artığ mənə mesaj göndərə bilərsən!`", "disapprove": "{mention}`, artığ mənə mesaj göndərə bilmərsən!`", "block": "{mention}`, səni blockladım!`"}
+    ORJ_PLUGIN_MESAJLAR = {"alive": "`🧑‍🚀 Space işləyir! Bir problem olduğunda Support Qrupumuza yazın.`", "afk": f"`{str(choice(AFKSTR))}`", "kickme": "`Bye Bye mən gedirəm `🚪", "pm": UNAPPROVED_MSG, "dızcı": str(choice(DIZCILIK_STR)), "ban": "{mention}`, Banlandı!!`", "mute": "{mention}`, səssizə alındı!`", "approve": "{mention}`, hey sən artığ mənə mesaj göndərə bilərsən!`", "disapprove": "{mention}`, artığ mənə mesaj göndərə bilmərsən!`", "block": "{mention}`, səni blockladım!`"}
 
     PLUGIN_MESAJLAR_TURLER = ["alive", "afk", "kickme", "pm", "dızcı", "ban", "mute", "approve", "disapprove", "block"]
     for mesaj in PLUGIN_MESAJLAR_TURLER:
@@ -201,7 +201,7 @@ try:
 
                     spec.loader.exec_module(mod)
                 except Exception as e:
-                    LOGS.info(f"`Yüklemede problem! Plugin xetalı.\n\nXəta: {e}`")
+                    LOGS.info(f"`Yükləmədə problem! Plugin xətalı.\n\nXəta: {e}`")
 
                     try:
                         plugin.delete()
