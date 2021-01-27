@@ -4,11 +4,11 @@
 ----
 
 <div align="center">
-  <img src="https://telegra.ph/Space-01-17">
+  <img src="https://githubusercontent.com/whomiri/SpaceInstaller/space.logo">
   <h1>SPACE UserBot</h1>
 </div>
 <p align="center">
-    Space UserBot, Telegram kullanmanızı kolaylaştıran bir bottur. Tamamen açık kaynaklı ve ücretsizdir.
+    Space UserBot, Telegram işlətməyinizi asanlaşdıran bir proyektdirş Bütünlüklə açığ yazılım kodlarına sahibdir. Müəllif hüquqları GNU Licence ilə qorunur.
     <br>
         <a href="https://github.com/whomiri/SpaceUserBot/blob/master/README.md#kurulum">Kurulum</a> |
         <a href="https://github.com/Whomiri/SpaceUserBot/wiki/G%C3%BCncelleme">Güncelleme</a> |
