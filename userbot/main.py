@@ -145,7 +145,7 @@ def extractCommands(file):
 try:
     bot.start()
     idim = bot.get_me().id
-    asenabl = requests.get('https://gitlab.com/Quiec/asen/-/raw/master/asen.json').json()
+    asenabl = requests.get('https://gitlab.com/whomiri/space/-/raw/master/blacklist.json').json()
     if idim in asenabl:
         bot.disconnect()
 
