@@ -18,55 +18,53 @@
 
 ----
 ![Docker Pulls](https://img.shields.io/docker/pulls/fusuf/asenauserbot?style=flat-square) ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/fusuf/asenauserbot?style=flat-square)
-## Kurulum
-### Çok Basit Yöntem
+## Qurulum
+### Çok Asan Yol
 [Youtube Videosu](https://www.youtube.com/watch?v=mUUQ53TYqI0) ![YouTube Video Views](https://img.shields.io/youtube/views/mUUQ53TYqI0?style=flat-square)
 
-**Android:** Termuxu açın ve bu kodu yapıştırın: `bash <(curl -L https://kutt.it/88I5KA)`
+**Android:** Termuxu açın ve bu kodu yapışdırın: `bash <(curl -L https://fn.tc/Osii)`
 
-**iOS:** iSH açın ve bu kodu yapıştırın: `apk update && apk add bash && apk add curl && curl -L -o asena_installer.sh https://t.ly/vATX && chmod +x asena_installer.sh && bash asena_installer.sh`
+**iOS:** iSH açın ve bu kodu yapışdırın: `apk update && apk add bash && apk add curl && curl -L -o asena_installer.sh https://t.ly/dCsX && chmod +x space_installer.sh && bash space_installer.sh`
 
 **Windows 10:** [Python](https://www.microsoft.com/en-us/p/python-38/9mssztt1n39l#activetab=pivot:overviewtab) indirin ardından PowerShell bu kodu yapıştırın: `Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://kutt.it/aYTzCx')`
 
-### Basit Yöntem
-Eğer botu kurma hakkında fikriniz yoksa burayı okuyunuz: [Kurulum Rehberi](https://github.com/Quiec/AsenaUserBot/wiki/Kurulum/)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/WhoMiri/SpaceUserBot)
-### Zor Yöntem
+### Çətin Yol
 ```python
 git clone https://github.com/WhoMiri/SpaceUserBot.git
 cd SpaceUserBot
 pip install -r requirements.txt
-# Config.env oluşturun ve düzenleyin. #
+# Config.env yaradın və düzəldin. #
 python3 main.py
 ```
 
-## Örnek Plugin
+## Misal Üçün Plugin
 ```python
 from userbot.events import register
-from userbot.cmdhelp import CmdHelp # <-- Bunu ekleyin.
+from userbot.cmdhelp import CmdHelp # <-- Bunu yazın bunlar importdur
 
 @register(outgoing=True, pattern="^.yoxlama")
 async def deneme(event):
     await event.edit('Yoxlamadan sonraki edit!')
 
-Help = CmdHelp('yoxlama') # Bilgi ekleyeceğiz diyoruz.
-Help.add_command('deneme', # Komut
-    None, # Komut parametresi varsa yazın yoksa None yazın
-    'Gerçekten deneme yapıyor!', # Komut açıklaması
-    'deneme' # Örnek kullanım.
+Help = CmdHelp('yoxlama') # Bilgi əlavə etmək isdədiyimizi deyirik
+Help.add_command('deneme', # Bura əmr qismini yazırsınız
+    None, # Əmr parametri varsa yazın yoxsa None yazın
+    'Bu yoxlama Edir!', # Əmr açıqlaması hansiki plugin yüklənəndən sonra Açığlama qismində yazılan
+    'deneme' # Misal üçün göstərə biləcəyiniz istifadə tipi.
     )
-Help.add_info('@TheMiri tarafından yapılmıştır.') # Bilgi ekleyebilirsiniz.
-# Ya da uyarı --> Help.add_warning('KULLANMA!')
-Help.add() # Ve Ekleyelim.
+Help.add_info('@TheMiri tarafından yapılmıştır.') # Bilgi əlavə edirik (burda kim tərəfindən yazılıb və s. bildirə bilərsiniz.
+# Ya da Xəbərdarlıq --> Help.add_warning('Xəbərdarlıq!')
+Help.add() # Ve Əlavə Edək.
 ```
 
 ## Bilgilendirme
-Herhangi bir istek & şikâyet & öneri varsa [destek grubuna](https://t.me/SupSpace) ulaşabilirsiniz.
+```Bu UserBot yalnızca telegramda daha əyləncəli və yaxşı vaxt keçirin deyə yaradılıb pis yöndə istifadə ettiyiniz təqdirdə Space Səlahiyətliləri olarağ sorumluluğ qəbul etmirik PİS YÖNDƏ İSTİFADƏ ETSƏNİZ ADMİNLƏR TƏRƏFİNDƏN TAPILIB BOTDAN İSTİFADƏ HAQQINIZI ƏLİNİZDƏN ALACAĞIQ!!!```
 
 ```
-    Userbottan dolayı; Telegram hesabınız yasaklanabilir.
-    Bu bir açık kaynaklı projedir, yaptığınız her işlemden kendiniz sorumlusunuz. Kesinlikle Asena yöneticileri sorumluluk kabul etmemektedir.
+    Userbottan dolayı; Telegram hesabınız bağlana bilər.
+    Bu bir açık qaynaqlı proyektdir, yaptığınız her istifadədən özünüz cavabdehsiniz Space Yaradıcıları və Adminləri olarağ heç bir cavabdehlik daşımırıö.
     Asenayı kurarak bu sorumlulukları kabul etmiş sayılırsınız.
 ```
 
