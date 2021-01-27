@@ -4,7 +4,7 @@
 ----
 
 <div align="center">
-  <img src="https://githubusercontent.com/whomiri/SpaceInstaller/space.logo">
+  <img src="https://github.com/whomiri/SpaceInstaller/raw/main/spacelogo.jpg">
   <h1>SPACE UserBot</h1>
 </div>
 <p align="center">
