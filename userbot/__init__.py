@@ -5,7 +5,7 @@
 #
 
 # Thanks github.com/spechide for creating inline bot support.
-# Asena UserBot - Yusuf Usta
+# SpaceUserBot - The Miri - Dadashzade
 """ UserBot hazırlanışı. """
 
 import os
