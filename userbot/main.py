@@ -139,7 +139,7 @@ def extractCommands(file):
             for Komut in Komutlar:
                 # if re.search('\[(\w*)\]', Komut):
                     # Komut = re.sub('(?<=\[.)[A-Za-z0-9_]*\]', '', Komut).replace('[', '')
-                CmdHelp.add_command(Komut, None, 'Bu plugin dışarıdan yüklenmiştir. Herhangi bir açıklama tanımlanmamıştır.')
+                CmdHelp.add_command(Komut, None, 'Bu plugin xaricdən yüklənib, hər hansı bir açıqlama qeyd olunmayıb.')
             CmdHelp.add()
 
 try:
