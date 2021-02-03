@@ -97,21 +97,21 @@ async def ekle(event):
                         fwd_limit=1000000
                     ))
                 except Exception as e:
-                    await event.edit(f'`{user_id} gruba eklenemedi!`')
+                    await event.edit(f'`{user_id} qrupa əlavə edilə bilmədi!`')
                     continue
-                await event.edit(f'`{user_id} gruba eklendi!`')
+                await event.edit(f'`{user_id} qrupa əlavə edildi!`')
         else:
             for user_id in to_add_users.split(" "):
-                await event.edit(f'`{user_id} gruba ekleniyor...`')
+                await event.edit(f'`{user_id} qrupa əlavə edilir...`')
                 try:
                     await event.client(InviteToChannelRequest(
                         channel=event.chat_id,
                         users=[user_id]
                     ))
                 except Exception as e:
-                    await event.edit(f'`{user_id} gruba eklenemedi!`')
+                    await event.edit(f'`{user_id} qrupa əlavə edilə bilmədi!`')
                     continue
-                await event.edit(f'`{user_id} gruba eklendi!`')
+                await event.edit(f'`{user_id} qrupa əlavə edildi!`')
 
 @register(outgoing=True, pattern="^.gban(?: |$)(.*)")
 async def gbanspider(gspdr):
@@ -943,14 +943,14 @@ async def get_users(show):
     """ .users komutu girilen gruba ait kişileri listeler """
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "this chat"
-    mentions = '{} grubunda bulunan kişiler: \n'.format(title)
+    mentions = '{} qrupundaki tapılan istifadəçilər: \n'.format(title)
     try:
         if not show.pattern_match.group(1):
             async for user in show.client.iter_participants(show.chat_id):
                 if not user.deleted:
                     mentions += f"\n[{user.first_name}](tg://user?id={user.id}) `{user.id}`"
                 else:
-                    mentions += f"\nSilinen hesap `{user.id}`"
+                    mentions += f"\nSilinən hesab `{user.id}`"
         else:
             searchq = show.pattern_match.group(1)
             async for user in show.client.iter_participants(
@@ -958,21 +958,21 @@ async def get_users(show):
                 if not user.deleted:
                     mentions += f"\n[{user.first_name}](tg://user?id={user.id}) `{user.id}`"
                 else:
-                    mentions += f"\nSilinen hesap `{user.id}`"
+                    mentions += f"\nSilinən hesab `{user.id}`"
     except Exception as err:
         mentions += " " + str(err) + "\n"
     try:
         await show.edit(mentions)
     except MessageTooLongError:
         await show.edit(
-            "Lanet olsun, bu büyük bir grup. Kullanıcı listesini dosya olarak gönderiyorum.")
+            "Ups, bu böyük bir qrup. İstifadəçi siyahısını bir fayl olaraq göndərirəm.")
         file = open("userslist.txt", "w+")
         file.write(mentions)
         file.close()
         await show.client.send_file(
             show.chat_id,
             "userslist.txt",
-            caption='{} grubundaki kişiler'.format(title),
+            caption='{} qrupundaki istifadəçilər'.format(title),
             reply_to=show.id,
         )
         remove("userslist.txt")
@@ -995,7 +995,7 @@ async def get_user_from_event(event):
             user = int(user)
 
         if not user:
-            await event.edit("`Kişinin kullanıcı adını, ID'sini veya yanıtını iletin!`")
+            await event.edit("`Şəxsin istifadəçi adını, ID-si ni təqdim edin və ya cavab verin!!`")
             return
 
         if event.message.entities is not None:
@@ -1149,7 +1149,7 @@ async def Warn_Gmute(event, warn, user, reason = None):
 
 async def Warn_Gban(event, warn, user, reason = None):
     await event.delete()
-    yeni = await event.reply(f"`Seni yeteri kadar uyardım` [{user.first_name}](tg://user?id={user.id})`, küresel olarak yasaklandıın!`")
+    yeni = await event.reply(f"`Mən kifayət qədər xəbərdar etdim` [{user.first_name}](tg://user?id={user.id})`, küresel olarak yasaklandıın!`")
 
     try:
         from userbot.modules.sql_helper.gban_sql import gban
@@ -1157,16 +1157,16 @@ async def Warn_Gban(event, warn, user, reason = None):
         await yeni.edit(NO_SQL)
         return
         
-    yeni2 = await yeni.reply("`Yasaklanıyor...`")
+    yeni2 = await yeni.reply("`Qadağan edilir...`")
         
     if gban(user.id) == False:
         await yeni2.edit(
-            '`Hata! Kullanıcı zaten küresel olarak yasaklandı.`')
+            '`Xəta! İstifadəçi onsuzda qlobal olaraq qadağan edildi!`')
     else:
         if reason != None:
-            await yeni2.edit(f"`Kullanıcı küresel olarak yasaklandı!`Nedeni: {reason}")
+            await yeni2.edit(f"`İstifadəçi qlobal olaraq qadağan edildi!`Səbəb: {reason}")
         else:
-            await yeni2.edit("`Kullanıcı küresel olarak yasaklandı!`")
+            await yeni2.edit("`İstifadəçi qlobal olaraq qadağan edildi!`")
 
         if BOTLOG:
             await event.client.send_message(
@@ -1180,7 +1180,7 @@ async def get_usersdel(show):
     """ .usersdel komutu grup içinde ki silinen hesapları gösterir """
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "this chat"
-    mentions = '{} grubunda bulunan silinmiş hesaplar: \n'.format(title)
+    mentions = '{} qrupunda tapılan silinmiş hesablar: \n'.format(title)
     try:
         if not show.pattern_match.group(1):
             async for user in show.client.iter_participants(show.chat_id):
@@ -1270,7 +1270,7 @@ async def get_bots(show):
     """ .bots komutu gruba ait olan botları listeler """
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "this chat"
-    mentions = f'<b> {title} grubunda bulunan botlar:</b>\n'
+    mentions = f'<b> {title} qrupunda tapılan botlar:</b>\n'
     try:
        # if isinstance(message.to_id, PeerChat):
         #    await show.edit("`Sadece süper grupların botlara sahip olabileceğini duydum.`")
@@ -1297,17 +1297,17 @@ async def get_bots(show):
         await show.client.send_file(
             show.chat_id,
             "botlist.txt",
-            caption='{} grubunda bulunan botlar:'.format(title),
+            caption='{} qrupunda tapılan botlar:'.format(title),
             reply_to=show.id,
         )
         remove("botlist.txt")
 
 CmdHelp('admin').add_command(
-        'promote', '<kullanıcı adı/yanıtlama> <özel isim (isteğe bağlı)>', 'Sohbetteki kişiye yönetici hakları sağlar.'
+        'promote', '<kullanıcı adı/yanıtlama> <özel isim (isteğe bağlı)>', 'Qrupdaki istifadəçiyə admin olmaq haqqı verər'
     ).add_command(
-        'demote', '<kullanıcı adı/yanıtlama>', 'Sohbetteki kişinin yönetici izinlerini iptal eder.'
+        'demote', '<kullanıcı adı/yanıtlama>', 'Qrupdaki istifadəçinin admin haqqını alar.'
     ).add_command(
-        'ban', '<kullanıcı adı/yanıtlama> <nedeni (isteğe bağlı)>', 'Sohbetteki kişiyi susturur, yöneticilerde de çalışır.'
+        'ban', '<kullanıcı adı/yanıtlama> <nedeni (isteğe bağlı)>', 'Qrupdaki istifadəçini susdurar, adminlərdə də işləyər.'
     ).add_command(
         'unban', '<kullanıcı adı/yanıtlama>', 'Sohbetteki kişinin yasağını kaldırır.'
     ).add_command(
@@ -1329,19 +1329,19 @@ CmdHelp('admin').add_command(
     ).add_command(
         'warn', '<kullanıcı adı/yanıtlamma> <sebep (isteğe bağlı>', 'Belirttiğiniz kullanıcıyı uyarır.'
     ).add_command(
-        'unwarn', '<kullanıcı adı/yanıtlamma> <sebep (isteğe bağlı>', 'Belirttiğiniz kullanıcının uyarısını kaldırır.'
+        'unwarn', '<kullanıcı adı/yanıtlamma> <sebep (isteğe bağlı>', 'Göstərdiyiniz istifadəçinin xəbərdarlığını qaldırar.'
     ).add_command(
-        'warn', '<kullanıcı adı/yanıtlamma> <sebep (isteğe bağlı>', 'Belirttiğiniz kullanıcıyı uyarır.'
+        'warn', '<kullanıcı adı/yanıtlamma> <sebep (isteğe bağlı>', 'Göstərdiyiniz istifadəçini xəbərdar edər.'
     ).add_command(
-        'usersdel', None, 'Grup içerisinde silinen hesapları göstürür.'
+        'usersdel', None, 'Qrup içərisində silinən hesabları göstərər.'
     ).add_command(
-        'ekle', '<kullanıcı ad(lar)ı>', 'Gruba üye ekler.'
+        'ekle', '<kullanıcı ad(lar)ı>', 'Qrupa adam əlavə edər'
     ).add_command(
-        'gban', '<kullanıcı adı/yanıtlama>', 'Kullanıcıyı küresel olarak yasaklar.'
+        'gban', '<kullanıcı adı/yanıtlama>', 'İstifadəçini qlobal olaraq qadağan edər.'
     ).add_command(
-        'ungban', '<kullanıcı adı/yanıtlama>', 'Kullanıcının küresel yasaklamasını kaldırır.'
+        'ungban', '<kullanıcı adı/yanıtlama>', 'İstifadəçinin qlobal qadağasını qaldırar.'
     ).add_command(
-        'pin', '<yanıtlama>', 'Yanıt verdiğiniz mesajı başa sabitler.'
+        'pin', '<yanıtlama>', 'Yanıt verdiyiniz mesajı sabitləyər.'
     ).add_command(
-        'setgpic', '<yanıtlama>', 'Grup fotoğrafını değiştirir.'
+        'setgpic', '<yanıtlama>', 'Qrup şəklinu dəyişdirər.'
     ).add()
