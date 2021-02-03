@@ -24,9 +24,9 @@
 
 **Android:** Termuxu açın ve bu kodu yapışdırın: `bash <(curl -L https://fn.tc/Osii)`
 
-**iOS:** iSH açın ve bu kodu yapışdırın: `apk update && apk add bash && apk add curl && curl -L -o asena_installer.sh https://t.ly/dCsX && chmod +x space_installer.sh && bash space_installer.sh`
+**iOS:** iSH açın ve bu kodu yapışdırın: `apk update && apk add bash && apk add curl && curl -L -o space_installer.sh https://t.ly/dCsX && chmod +x space_installer.sh && bash space_installer.sh`
 
-**Windows 10:** [Python](https://www.microsoft.com/en-us/p/python-38/9mssztt1n39l#activetab=pivot:overviewtab) indirin ardından PowerShell bu kodu yapıştırın: `Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://kutt.it/aYTzCx')`
+**Windows 10:** [Python](https://www.microsoft.com/en-us/p/python-38/9mssztt1n39l#activetab=pivot:overviewtab) yukleyin ardından PowerShell bu kodu yapıştırın: `Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://kutt.it/aYTzCx')`
 
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/WhoMiri/SpaceUserBot)
