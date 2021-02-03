@@ -42,7 +42,7 @@ DIZCILIK_STR = [
 ]
 
 AFKSTR = [
-    "Şu an acele işim var, daha sonra mesaj atsan olmaz mı? Zaten yine geleceğim.",
+    "İndi vacib işim var, daha sonra mesaj atsan olmaz? Onsuzda yenə gələcəm.",
     "Aradığınız kişi şu anda telefona cevap veremiyor. Sinyal sesinden sonra kendi tarifeniz üzerinden mesajınızı bırakabilirsiniz. Mesaj ücreti 49 kuruştur. \n`biiiiiiiiiiiiiiiiiiiiiiiiiiiiip`!",
     "Birkaç dakika içinde geleceğim. Fakat gelmezsem...\ndaha fazla bekle.",
     "Şu an burada değilim, muhtemelen başka bir yerdeyim.",
