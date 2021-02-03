@@ -59,7 +59,7 @@ Help.add_info('@TheMiri tarafından yapılmıştır.') # Bilgi əlavə edirik (b
 Help.add() # Ve Əlavə Edək.
 ```
 
-## Bilgilendirme
+## Qeyd
 ```Bu UserBot yalnızca telegramda daha əyləncəli və yaxşı vaxt keçirin deyə yaradılıb pis yöndə istifadə ettiyiniz təqdirdə Space Səlahiyətliləri olarağ sorumluluğ qəbul etmirik PİS YÖNDƏ İSTİFADƏ ETSƏNİZ ADMİNLƏR TƏRƏFİNDƏN TAPILIB BOTDAN İSTİFADƏ HAQQINIZI ƏLİNİZDƏN ALACAĞIQ!!!```
 
 ```
