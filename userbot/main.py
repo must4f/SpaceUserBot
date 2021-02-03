@@ -43,12 +43,12 @@ DIZCILIK_STR = [
 
 AFKSTR = [
     "İndi vacib işim var, daha sonra mesaj atsan olmaz? Onsuzda yenə gələcəm.",
-    "Aradığınız kişi şu anda telefona cevap veremiyor. Sinyal sesinden sonra kendi tarifeniz üzerinden mesajınızı bırakabilirsiniz. Mesaj ücreti 49 kuruştur. \n`biiiiiiiiiiiiiiiiiiiiiiiiiiiiip`!",
+    "Hörmətli istifadəçi zəng etdiyiniz şəxs hazırda telefona cavab verə bilmir.",
     "Birkaç dakika içinde geleceğim. Fakat gelmezsem...\ndaha fazla bekle.",
-    "Şu an burada değilim, muhtemelen başka bir yerdeyim.",
-    "Güller kırmızı\nMenekşeler mavi\nBana bir mesaj bırak\nVe sana döneceğim.",
-    "Bazen hayattaki en iyi şeyler beklemeye değer…\nHemen dönerim.",
-    "Hemen dönerim,\nama eğer geri dönmezsem,\ndaha sonra dönerim.",
+    "İndi burada deyiləm, Yəqin ki, başqa bir yerdəyəm..",
+    "Hey, sahibim hal-hazırda burada deyil!",
+    "Bəzən həyatdakı ən yaxşı şeylər gözləməyə dəyər…\nGələcəm.",
+    "Gələcəm,\namma əgər gəlməsəm,\ndaha sonra gələrəm.",
     "Henüz anlamadıysan,\nburada değilim.",
     "Merhaba, uzak mesajıma hoş geldiniz, bugün sizi nasıl görmezden gelebilirim?",
     "7 deniz ve 7 ülkeden uzaktayım,\n7 su ve 7 kıta,\n7 dağ ve 7 tepe,\n7 ovala ve 7 höyük,\n7 havuz ve 7 göl,\n7 bahar ve 7 çayır,\n7 şehir ve 7 mahalle,\n7 blok ve 7 ev...\n\nMesajların bile bana ulaşamayacağı bir yer!",
@@ -201,7 +201,7 @@ try:
 
                     spec.loader.exec_module(mod)
                 except Exception as e:
-                    LOGS.info(f"`Yükləmədə problem! Plugin xətalı.\n\nXəta: {e}`")
+                    LOGS.info(f"`Yükləmədə problem! Plugin xətalıdır.\n\nXəta: {e}`")
 
                     try:
                         plugin.delete()
