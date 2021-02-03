@@ -13,7 +13,7 @@ from os import (remove, path)
 
 @register(outgoing=True, pattern="^.[çc]evir voice(?: |$)(.*)")
 async def seslimuzik(event):
-    caption = "@SpaceUserBot ilə sesli mesaja çevrildi."
+    caption = "@SpaceUserBot ilə səsli mesaja çevrildi."
     if event.fwd_from:
         return
     sarki = event.pattern_match.group(1)
@@ -24,7 +24,7 @@ async def seslimuzik(event):
         if event.is_reply:
             sarki = rep_msg.text
         else:
-            await event.edit("**Mənə bir mp3 ver!** `İstifadə: .çevir voice _mp3ü yanıtlayın_`") 
+            await event.edit("**Mənə bir mp3 ver!** `İstifadəsi: .çevir voice _mp3ü yanıtlayın_`") 
             return
 
     if event.is_reply:
@@ -32,7 +32,7 @@ async def seslimuzik(event):
         if rep_msg.audio:
             await event.edit(f"__Səs yüklənir...__")
             indir = await rep_msg.download_media()
-            await event.edit(f"__Sesi yüklədim səsli not olarağ göndərirəm...__")
+            await event.edit(f"__Sesi yüklədim səsli mesaj olarağ göndərirəm...__")
             voice = await asyncio.create_subprocess_shell(f"ffmpeg -i '{indir}' -y -c:a libopus 'unvoice.ogg'")
             await voice.communicate()
             if path.isfile("unvoice.ogg"):
@@ -40,7 +40,7 @@ async def seslimuzik(event):
                 await event.delete()
                 remove("unvoice.ogg")
             else:
-                await event.edit("`Ses, sesli nota çevrilə bilmədi!`")
+                await event.edit("`Səs, səsli mesaja çevrilə bilmədi!`")
             remove(indir)
 
 Komut = CmdHelp('Voice')
