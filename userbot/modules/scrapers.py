@@ -1,4 +1,4 @@
-# U S Σ R Δ T O R / Ümüd
+# SpaceUserBot
 
 
 """ Scrapers """
