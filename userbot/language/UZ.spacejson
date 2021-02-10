@@ -613,12 +613,17 @@
             "COMMON_CHAT": "Ushbu foydalanuvchi bilan umumiy guruhlar",
             "LINK": "Profil uchun doimiy havola"
         },
+        
         "www": {
             "SPEED": "`Tezlik sinovi...`",
             "STARTED_TIME": "Boshlangan vaqti: ",
             "DOWNLOAD_SPEED": "Yuklab olish tezligi: ",
             "UPLOAD_SPEED": "Yuklash tezligi: ",
             "ISP": "Internet provayder: "
+        },
+	    "yetkaspace": {
+            "YOLLA_MENE": "`Mesaj KayıtlıMesajlar bölümüne kayd edildi...`",
+            "YOLLAMA_MENE": "`Lütfen bir mesaja cevap verin`"
         }
     }
 }
