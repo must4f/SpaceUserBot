@@ -54,6 +54,8 @@ async def on_new_message(event):
 
 
 @register(outgoing=True, pattern="^.küfür ?(.*)")
+@register(outgoing=True, pattern="^.otoblist ?(.*)")
+@register(outgoing=True, pattern="^.s[oö]y[üu]ş ?(.*)")
 async def kufur(event):
     kufur = event.pattern_match.group(1)
     if len(kufur) < 1:
@@ -62,7 +64,7 @@ async def kufur(event):
     if kufur == "aç":
         sql.add_to_blacklist(event.chat_id, "küfür")
         await event.edit(LANG['OPENED_KUFUR'])
-    elif kufur == "kapa":
+    elif kufur == "bağla":
         if sql.rm_from_blacklist(event.chat_id, "küfür"):
             await event.edit(LANG['CLOSED_KUFUR'])
         else:
@@ -116,9 +118,11 @@ async def on_delete_blacklist(rmbl):
     await rmbl.edit(LANG['REMOVED'])
     
 CmdHelp('blacklist').add_command(
-    'listblacklist', None, 'Bir sohbetteki etkin kara listeyi listeler.'
+    'listblacklist', None, 'Bir sohbetteki aktiv blacklisti göstərər.'
 ).add_command(
-    'addblacklist', '<kelime(ler)/yanıt>', 'İletiyi \'kara liste anahtar kelimesine\' kaydeder. \'Kara liste anahtar kelimesinden\' bahsedildiğinde bot iletiyi siler.', '.addblacklist amk'
+    'addblacklist', '<kəlimə(lər)/cavap>', 'Mesajı \'qara list bölməsinə\' qeydedər. \'Kara liste anahtar kelimesinden\' bahsedildiğinde bot iletiyi siler.', '.addblacklist amk'
 ).add_command(
     'rmblacklist', '<kelime>', 'Belirtilen kara listeyi durdurur.', '.rmblacklist amk'
+).add_command(
+    'otoblist', '<aç/bağla>', 'Oto Blacklisti açar grupda söyüş söyən olsa silər', '.otoblist aç'
 ).add_warning('Bu işlemleri gerçekleştirmek için yönetici olmalı ve **Mesaj Silme** yetkiniz olmalı.').add()
