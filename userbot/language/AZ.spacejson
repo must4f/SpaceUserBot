@@ -670,6 +670,8 @@
 	},
 	"yetkaspace": {
             "YOLLA_MENE": "`Mesaj Kayıtlı Mesajlar bölümünə əlavə edildi...`",
+	    "PM_ACSESS": "`Avtomatik mesaj` @SpaceUserBot `ilə göndərildi`",
+	    "PM_QEUIC": "`Xaiş edirəm göndərəcəyim şəxsi qeyd elə`",
             "YOLLAMA_MENE": "`Xaiş edirəm bir mesaja cavap verin`"
         }
     }
