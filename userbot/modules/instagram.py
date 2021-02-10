@@ -2,12 +2,14 @@ import asyncio
 from userbot.events import register
 import os
 import requests
+
 @register(pattern="^.instagram (.*)",outgoing=True)
-async def igza(event):
+@register(pattern="^.whoin (.*)",outgoing=True)
+async def whoin(event):
     username = event.pattern_match.group(1)
     last = username.lower()
     try:
-        await event.edit("`Melumatlar getirilir..`")
+        await event.edit(LANG['INFO_STATUS'])
         os.system("pip install instaloader")
         import instaloader
         L = instaloader.Instaloader()
@@ -26,26 +28,26 @@ async def igza(event):
         url = profile.external_url
         biznes = profile.is_business_account
         gizli = profile.is_private
-        aydi = profile.userid
+        space = profile.userid
         r = requests.get(pp) 
         with open("oyeman.jpg", "wb")as file: 
           file.write(r.content) 
         igtv = profile.igtvcount
         msg = f'''
-       **Hesab məlumatları:**
+       **USER INFO:**
          **Username:** [{last}](https://instagram.com/{last})
-         **ID:** `{aydi}`
-         **Ad:** `{ad}`
+         **ID:** `{space}`
+         **Name:** `{ad}`
          **Bio:** `{bio}`
          **Followers:** `{follover}`
          **Following:** `{folloving}`
          **Post sayı:** `{post}`
          **IgTv sayı:** `{igtv}`
-         **Hesab doğrulanıbmı:** `{res}`
-         **Xarici bağlantı:** `{url}`
-         **Gizli hesabdırmı:** `{gizli}`
-         **Biznes hesabıdırmı:** `{biznes}`
-            '''
+         **Account verified:** `{res}`
+         **Url:** `{url}`
+         **Private(gizli) hesap:** `{gizli}`
+         **Biznes hesabı?:** `{biznes}`
+           '''
         await event.delete()
         await event.client.send_file(event.chat_id,"oyeman.jpg",caption=msg)
         os.remove("oyeman.jpg")
