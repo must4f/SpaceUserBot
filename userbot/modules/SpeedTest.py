@@ -1,5 +1,4 @@
-# Code by: @s1rvann 
-# İcazəsiz Oğurlama Oğul!
+
 from datetime import datetime
 from speedtest import Speedtest
 from telethon import functions
