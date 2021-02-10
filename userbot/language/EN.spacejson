@@ -620,7 +620,7 @@
             "UPLOAD_SPEED": "Upload Speed: ",
             "ISP": "ISP:"
         },
-	    "yetkaspace": {
+        "yetkaspace": {
             "YOLLA_MENE": "`Message sended for me...`",
             "YOLLAMA_MENE": "`Pleas reply is message`"
         }
