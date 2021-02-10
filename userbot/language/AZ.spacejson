@@ -668,7 +668,7 @@
             "UPLOAD_SPEED": "Upload Sürrəti: ",
             "ISP": "İnternet xidməti təminatçısı: "
 	},
-	 "yetkaspace": {
+	"yetkaspace": {
             "YOLLA_MENE": "`Mesaj KayıtlıMesajlar bölümünə əlavə edildi...`",
             "YOLLAMA_MENE": "`Xaiş edirəm bir mesaja cavap verin`"
         }
