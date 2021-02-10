@@ -669,7 +669,9 @@
             "ISP": "İnternet Servis Sağlayıcısı: "
 	},
 	"yetkaspace": {
-            "YOLLA_MENE": "`Mesaj KayıtlıMesajlar bölümüne kayd edildi...`",
+            "YOLLA_MENE": "`Mesaj Kayıtlı Mesajlar bölümüne kayd edildi...`",
+	    "PM_ACSESS": "`Ovtomatik mesaj` @SpaceUserBot `ile gönderildi`",
+	    "PM_QEUIC": "`Lütfen komutun yanına bir isim yazınız...`",
             "YOLLAMA_MENE": "`Lütfen bir mesaja cevap verin`"
         }
     }
