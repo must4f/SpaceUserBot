@@ -621,7 +621,7 @@
             "UPLOAD_SPEED": "Yuklash tezligi: ",
             "ISP": "Internet provayder: "
         },
-	    "yetkaspace": {
+        "yetkaspace": {
             "YOLLA_MENE": "`Mesaj KayıtlıMesajlar bölümüne kayd edildi...`",
             "YOLLAMA_MENE": "`Lütfen bir mesaja cevap verin`"
         }
