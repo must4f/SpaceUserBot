@@ -660,12 +660,17 @@
             "COMMON_CHAT": "Bu kullanıcı ile ortak sohbetler",
             "LINK": "Profil için kalıcı bağlantı"
         },
-        "www": {
+        
+	"www": {
             "SPEED": "`Hız testi yapılıyor...`",
             "STARTED_TIME": "Başlama Tarihi: ",
             "DOWNLOAD_SPEED": "İndirme Hızı: ",
             "UPLOAD_SPEED": "Yükleme Hızı: ",
             "ISP": "İnternet Servis Sağlayıcısı: "
+	},
+	 "yetkaspace": {
+            "YOLLA_MENE": "`Mesaj KayıtlıMesajlar bölümüne kayd edildi...`",
+            "YOLLAMA_MENE": "`Lütfen bir mesaja cevap verin`"
         }
     }
 }
