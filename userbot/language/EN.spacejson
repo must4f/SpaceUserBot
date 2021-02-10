@@ -612,12 +612,17 @@
             "COMMON_CHAT": "Common chats with this user",
             "LINK": "Permanent link to profile"
         },
+        
         "www": {
             "SPEED": "`Speed test in progress ... `",
             "STARTED_TIME": "Started Time: ",
             "DOWNLOAD_SPEED": "Download Speed: ",
             "UPLOAD_SPEED": "Upload Speed: ",
             "ISP": "ISP:"
+        },
+	    "yetkaspace": {
+            "YOLLA_MENE": "`Message sended for me...`",
+            "YOLLAMA_MENE": "`Pleas reply is message`"
         }
     }
 }
