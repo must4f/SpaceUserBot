@@ -622,6 +622,8 @@
         },
         "yetkaspace": {
             "YOLLA_MENE": "`Message sended for me...`",
+            "PM_ACSESS": "`Auto message send ith` @SpaceUserBot",
+	    "PM_QEUIC": "`ERROR`",
             "YOLLAMA_MENE": "`Pleas reply is message`"
         }
     }
