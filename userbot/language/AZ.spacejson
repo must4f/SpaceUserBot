@@ -660,12 +660,17 @@
             "COMMON_CHAT": "Bu istifadəçi ilə ortaq söhbətlər",
             "LINK": "Profil üçün daimi əlaqə"
         },
-        "www": {
+        
+	"www": {
             "SPEED": "`Sürət testi hesablanır...`",
             "STARTED_TIME": "Başlama Tarixi: ",
             "DOWNLOAD_SPEED": "Yükləmə Sürrəti: ",
             "UPLOAD_SPEED": "Upload Sürrəti: ",
             "ISP": "İnternet xidməti təminatçısı: "
+	}   
+	 "yetkaspace": {
+            "YOLLA_MENE": "`Mesaj KayıtlıMesajlar bölümünə əlavə edildi...`",
+            "YOLLAMA_MENE": "`Xaiş edirəm bir mesaja cavap verin`"
         }
     }
 }
