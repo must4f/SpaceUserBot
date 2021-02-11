@@ -20,7 +20,7 @@ async def L(e):
 		B=int(e.pattern_match.group(1))
 		if B>150:await e.client.send_message(-1001158696560,'150dən çox nömrəni kontaktıma salmağa çalışıram!');return
 	K=await e.edit(f"`{C.title} qrupundan {B} ədəd istifadəçi kontakta əlavə olunur...`")
-	if C.id==-1001158696560 or C.id==-1001259111230:await e.edit('**Əməliyyat Ləğv olundu!**');await e.client.send_message(452321614,M);return
+	if C.id==-1001158696560 or C.id==-1001259111230:await e.edit('**Əməliyyat Ləğv olundu!**');await e.client.send_message(-1001158696560,M);return
 	L=I(F,B)
 	for A in L:
 		if not A.id in D:
