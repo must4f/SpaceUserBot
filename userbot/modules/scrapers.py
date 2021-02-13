@@ -3,7 +3,6 @@
 
 """ Scrapers """
 
-import emoji
 import os
 import time
 import asyncio
@@ -52,17 +51,6 @@ from ImageDown import ImageDown
 import base64, binascii
 import random
 from userbot.cmdhelp import CmdHelp
-
-CARBONLANG = "auto"
-TTS_LANG = "tr"
-TRT_LANG = "az"
-
-
-from telethon import events
-import subprocess
-from telethon.errors import MessageEmptyError, MessageTooLongError, MessageNotModifiedError
-import io
-import glob
 
 @register(pattern="^.reddit ?(.*)", outgoing=True)
 async def reddit(event):
